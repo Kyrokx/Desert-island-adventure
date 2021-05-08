@@ -8,6 +8,10 @@ import pyscroll
 
 from src.Player import Player
 
+from src.SoundManger import soundManger
+
+import time
+
 
 class Game:
     def __init__(self):
@@ -27,7 +31,7 @@ class Game:
         # Player instence
         self.player = Player(self.player_spawn.x, self.player_spawn.y)
         # group with map
-        self.group = pyscroll.PyscrollGroup(map_layer=self.map_layer, default_layer=3)
+        self.group = pyscroll.PyscrollGroup(map_layer=self.map_layer, default_layer=4)
         self.group.add(self.player)
 
         # Collision avec les mur
@@ -35,6 +39,10 @@ class Game:
         for obj in tmx_data.objects:
             if obj.type == "collid":
                 self.objects_in_map.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+
+        sound = soundManger()
+        sound.set_volume(100)
+        sound.play_back_sound()
 
     def handle(self):
         keys = pygame.key.get_pressed()
@@ -64,11 +72,13 @@ class Game:
         clock = pygame.time.Clock()
 
         while running:
+
             self.player.save_location()
             self.handle()
             self.update()
             self.group.draw(self.screen)
             self.group.center(self.player.rect.center)
+
             # Refresh window
             pygame.display.flip()
 

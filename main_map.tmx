@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="70" height="46" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="69">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="70" height="46" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="86">
  <tileset firstgid="1" source="Assets/RPG Nature Tileset.tsx"/>
  <tileset firstgid="721" source="Assets/house.tsx"/>
  <tileset firstgid="1496" source="Assets/IceTileset.tsx"/>
@@ -266,9 +266,6 @@
   <object id="16" type="collid" x="177.333" y="257.333">
    <polygon points="-0.75,-2.25 -1.16667,13.3333 206,14 206,94.6667 238.667,94.6667 238,78 270,79.3333 270.667,62.6667 286,63.3333 286.667,30 254.667,30 254.667,14.6667 238.667,14 238.667,-2 208.667,-1.33333 206.667,-2 207.333,-17.3333 78.6667,-18 78.4167,-1.41667"/>
   </object>
-  <object id="17" type="collid" x="240.667" y="674">
-   <polygon points="0,0 -1.33333,12.6667 303.333,13.3333 302.667,-2 318.667,-2.66667 319.333,-17.3333 428.667,-18 431.333,-3.33333 494.667,-2.66667 496,-19.3333 526.667,-18 527.333,-82 558,-82.6667 559.333,-163.333 606,-162 607.333,-178 638,-179.333 638.667,-193.333 608,-194 606.667,-208.667 592,-208.667 592,-195.333 526.667,-194.667 527.333,-178.667 512.667,-179.333 512.667,-163.333 496.667,-162 495.333,-146.667 462,-146 462.667,-116.667 478.667,-114 478.667,-69.3333 495.333,-65.3333 495.333,-52 428.667,-50.6667 431.333,-112.667 382.667,-114 384,-99.3333 317.333,-97.3333 318.667,-68 302,-66 302.667,-50 238,-49.3333 239.333,-34.6667 158,-33.3333 158,-18.6667 64,-18 62,-3.33333"/>
-  </object>
   <object id="19" type="collid" x="86.6667" y="111" width="16.3333" height="15.3333"/>
   <object id="20" type="collid" x="232" y="95.6667" width="16.3333" height="13.3333"/>
   <object id="21" type="collid" x="296.333" y="96" width="15" height="13"/>
@@ -305,7 +302,6 @@
   <object id="58" type="collid" x="784.5" y="225" width="14.5" height="141"/>
   <object id="59" type="collid" x="798.5" y="241" width="12.5" height="125.5"/>
   <object id="60" type="collid" x="511" y="288" width="242" height="63"/>
-  <object id="61" x="495" y="320.5" width="14" height="30"/>
   <object id="62" type="collid" x="671.5" y="350.5" width="79.5" height="48.5"/>
   <object id="63" type="collid" x="672.5" y="399" width="48.5" height="15.5"/>
   <object id="64" type="collid" x="810.5" y="293" width="149" height="74"/>
@@ -313,5 +309,22 @@
   <object id="66" type="collid" x="849" y="368" width="79" height="16.5"/>
   <object id="67" type="collid" x="912" y="383" width="15.5" height="96"/>
   <object id="68" type="collid" x="897" y="433" width="14.5" height="31"/>
+  <object id="69" type="collid" x="239.333" y="670.667" width="304.667" height="16.6667"/>
+  <object id="70" type="collid" x="303.333" y="656" width="256" height="14.6667"/>
+  <object id="71" type="collid" x="833.333" y="462.667" width="14" height="51.3333"/>
+  <object id="72" type="collid" x="846" y="480" width="33.3333" height="15.3333"/>
+  <object id="73" type="collid" x="768" y="479.333" width="66" height="32"/>
+  <object id="74" type="collid" x="752" y="498" width="47.3333" height="93.3333"/>
+  <object id="75" type="collid" x="736.667" y="513.333" width="14" height="143.333"/>
+  <object id="76" type="collid" x="751.333" y="592.667" width="16.6667" height="66"/>
+  <object id="77" type="collid" x="706" y="528.667" width="30.6667" height="33.3333"/>
+  <object id="78" type="collid" x="720.667" y="562" width="14.6667" height="45.3333"/>
+  <object id="79" type="collid" x="622.667" y="560.667" width="47.3333" height="93.3333"/>
+  <object id="80" type="collid" x="670.667" y="622" width="64.6667" height="48.6667"/>
+  <object id="81" type="collid" x="560" y="575.333" width="61.3333" height="82"/>
+  <object id="82" type="collid" x="544.667" y="608" width="16" height="48"/>
+  <object id="83" type="collid" x="482" y="624.667" width="62" height="30"/>
+  <object id="84" type="collid" x="403.333" y="637.333" width="76" height="17.3333"/>
+  <object id="85" type="collid" x="495.75" y="320.25" width="15.5" height="32"/>
  </objectgroup>
 </map>
