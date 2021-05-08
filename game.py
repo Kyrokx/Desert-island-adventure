@@ -27,32 +27,46 @@ class Game:
         # Player instence
         self.player = Player(self.player_spawn.x, self.player_spawn.y)
         # group with map
-        self.group = pyscroll.PyscrollGroup(map_layer=self.map_layer, default_layer=4)
+        self.group = pyscroll.PyscrollGroup(map_layer=self.map_layer, default_layer=3)
         self.group.add(self.player)
+
+        # Collision avec les mur
+        self.objects_in_map = []
+        for obj in tmx_data.objects:
+            if obj.type == "collid":
+                self.objects_in_map.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
 
     def handle(self):
         keys = pygame.key.get_pressed()
 
-        if keys[pygame.K_UP]:
+        if keys[pygame.K_UP] or keys[pygame.K_z]:
             self.player.move_up()
             self.player.change_image('up')
-        elif keys[pygame.K_DOWN]:
+        elif keys[pygame.K_DOWN] or keys[pygame.K_s]:
             self.player.move_down()
             self.player.change_image('down')
-        elif keys[pygame.K_LEFT]:
+        elif keys[pygame.K_LEFT] or keys[pygame.K_q]:
             self.player.move_left()
             self.player.change_image('left')
-        elif keys[pygame.K_RIGHT]:
+        elif keys[pygame.K_RIGHT] or keys[pygame.K_d]:
             self.player.move_right()
             self.player.change_image('right')
+
+    def update(self):
+        self.group.update()
+
+        for sprite in self.group.sprites():
+            if sprite.feet.collidelist(self.objects_in_map) > -1:
+                sprite.move_back()
 
     def run(self):
         running = True
         clock = pygame.time.Clock()
 
         while running:
+            self.player.save_location()
             self.handle()
-            self.group.update()
+            self.update()
             self.group.draw(self.screen)
             self.group.center(self.player.rect.center)
             # Refresh window
